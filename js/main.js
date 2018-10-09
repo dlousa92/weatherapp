@@ -14,3 +14,12 @@ function searchWeather(term) {
 function init(res) {
     console.log(res)
 }
+
+// selectors
+
+let button =document.getElementById('searchButton')
+button.addEventListener("click", () => {
+    let term = document.getElementById('searchField').value
+
+    console.log(term)
+})
