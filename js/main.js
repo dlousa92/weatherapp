@@ -48,11 +48,25 @@ function init(res) {
         default: 
             break
     }
+
+    cityName.innerText = res.name
+    weatherIcon.src = "http://openweathermap.org/img/w/" + res.weather[0].icon + ".png"
+    let resultDescription = res.weather[0].description
+    weatherDescription.innerText = resultDescription.charAt(0).toUpperCase() + resultDescription.slice(1)
+    temperature.innerHTML = Math.floor(res.main.temp) + "&#176" 
+    windspeed.innerHTML  = "Wind speed at " +  Math.floor(res.wind.speed) + " m/s"
+    humidity.innerHTML = "Humidity is at " + res.main.humidity + "%"
 }
 
 // selector functions
 
 let button = document.getElementById("searchButton")
+let cityName = document.getElementById("cityName")
+let temperature = document.querySelector(".temperature")
+let weatherDescription = document.querySelector(".weatherDescription")
+let weatherIcon = document.getElementById("weatherIcon")
+let windspeed = document.querySelector(".windspeed")
+let humidity = document.querySelector(".humidity")
 
 button.addEventListener("click", () => {
     let searchTerm = document.getElementById('searchField').value
