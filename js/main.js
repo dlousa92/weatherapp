@@ -26,6 +26,28 @@ function searchWeather(searchTerm) {
 // populates all fields in our html file with the res
 function init(res) {
     console.log(res)
+
+    switch (res.weather[0].main) {
+        case "Clear":
+            document.body.style.backgroundImage = "url('./img/sunny.jpg')"
+            break
+        case "ThunderStorm":
+            document.body.style.backgroundImage = "url('./img/storm.jpeg')"
+            break
+        case "Drizzle":
+        case "Rain":
+        case "Mist":
+            document.body.style.backgroundImage = "url('./img/rain.jpeg')"
+            break
+        case "Snow":
+            document.body.style.backgroundImage = "url('./img/snow.jpeg')"
+            break
+        case "Clouds":
+            document.body.style.backgroundImage = "url('./img/cloudy.jpeg')"
+            break
+        default: 
+            break
+    }
 }
 
 // selector functions
