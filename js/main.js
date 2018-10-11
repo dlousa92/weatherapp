@@ -27,29 +27,29 @@ function searchWeather (searchTerm) {
 function init (res) {
   console.log(res)
 
-  switch (res.weather[0].main) {
-    case 'Clear':
-      document.body.style.backgroundImage = "url('./img/sunny.jpg')"
-      break
-    case 'ThunderStorm':
-      document.body.style.backgroundImage = "url('./img/storm.jpeg')"
-      break
-    case 'Drizzle':
-    case 'Rain':
-    case 'Mist':
-      document.body.style.backgroundImage = "url('./img/rain.jpeg')"
-      break
-    case 'Snow':
-      document.body.style.backgroundImage = "url('./img/snow.jpeg')"
-      break
-    case 'Clouds':
-      document.body.style.backgroundImage = "url('./img/cloudy.jpeg')"
-      break
-    default:
-      break
-  }
+//   switch (res.weather[0].main) {
+//     case 'Clear':
+//       document.body.style.backgroundImage = "url('./img/sunny.jpg')"
+//       break
+//     case 'ThunderStorm':
+//       document.body.style.backgroundImage = "url('./img/storm.jpeg')"
+//       break
+//     case 'Drizzle':
+//     case 'Rain':
+//     case 'Mist':
+//       document.body.style.backgroundImage = "url('./img/rain.jpeg')"
+//       break
+//     case 'Snow':
+//       document.body.style.backgroundImage = "url('./img/snow.jpeg')"
+//       break
+//     case 'Clouds':
+//       document.body.style.backgroundImage = "url('./img/cloudy.jpeg')"
+//       break
+//     default:
+//       break
+//   }
 
-  searchContainer.style.marginTop = '-150px'
+  searchContainer.style.marginTop = '-50px'
   weatherContainer.style.padding = '100px'
   cityName.innerText = res.name
   weatherIcon.src = 'http://openweathermap.org/img/w/' + res.weather[0].icon + '.png'
