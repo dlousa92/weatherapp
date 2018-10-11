@@ -1,4 +1,4 @@
-body .searchContainer, body {
+body .weatherContainer .weatherMain, body .searchContainer, body {
   display: flex;
   flex-direction: column;
 }
@@ -11,17 +11,78 @@ body {
   justify-content: center;
   background-image: url("../img/default.jpeg");
   background-size: cover;
+  font-family: "Niramit", sans-serif;
+}
+body .searchContainer {
+  border: none;
+  transition: 1.5s;
+  position: relative;
 }
 body .searchContainer #searchField {
-  font-size: 1.5em;
-  padding: 10px;
+  font-size: 1.2em;
+  padding: 18px;
+  width: 320px;
   margin-bottom: 5px;
+  background-color: #F7F7FF;
+}
+body .searchContainer #searchField:focus {
+  padding: 20px;
+  transition: 0.2s;
 }
 body .searchContainer #searchButton {
-  font-size: 1.5em;
-  padding: 10px;
-  width: 50%;
+  font-size: 1em;
+  padding: 15px;
+  width: 30%;
+  color: #F7F7FF;
+  background-color: #007EA7;
+  border: #007EA7;
   margin: 0 auto;
+  position: absolute;
+  left: 260px;
+  top: 12%;
+}
+body .weatherContainer {
+  background-color: #F7F7FF;
+  margin-top: 100px;
+  border-radius: 20px;
+}
+body .weatherContainer .weatherMain {
+  justify-content: space-around;
+  align-items: center;
+}
+body .weatherContainer .weatherMain p {
+  margin: 0;
+}
+body .weatherContainer .weatherMain #cityName {
+  font-size: 2.5em;
+  margin: 0;
+}
+body .weatherContainer .weatherMain .temperature {
+  font-size: 2em;
+  text-align: center;
+}
+body .weatherContainer .weatherMain .weatherInfo .weatherDetails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hvr-forward {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.hvr-forward:hover, .hvr-forward:focus, .hvr-forward:active {
+  -webkit-transform: translateX(8px);
+  transform: translateX(8px);
 }
 
 /*# sourceMappingURL=main.css.map */
