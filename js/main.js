@@ -4,7 +4,8 @@ let searchMethod = 'zip'
 
 // sets whether the user is searching with zip code or city name
 function getSearchMethod (searchTerm) {
-  if (searchTerm.length === 5 && Number.parseInt(searchTerm) === searchTerm) {
+  if (searchTerm.length === 5 && Number.parseInt(searchTerm) + '' === searchTerm) {
+    console.log('working')
     searchMethod = 'zip'
   } else {
     searchMethod = 'q'
