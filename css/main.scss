@@ -18,6 +18,7 @@ body {
 
    .searchContainer {
       @extend %flex-column;
+      transition: .3s;
 
       #searchField {
         font-size: 1.5em;
@@ -33,5 +34,10 @@ body {
         margin: 0 auto;
         background-color: $primary-color;
       }
+   }
+
+   .weatherContainer {
+     background-color: $primary-color;
+     margin-top: 100px;
    }
 }
