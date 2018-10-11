@@ -1,14 +1,33 @@
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+
 body {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   display: flex;
+   @extend %flex-column;
    align-items: center;
-   flex-direction: column;
+   justify-content: center;
    background-image: url('../img/default.jpeg');
    background-size: cover;
 
    .searchContainer {
-      margin: 30px 0px;
+      @extend %flex-column;
+
+      #searchField {
+        font-size: 1.5em;
+        padding: 10px;
+        margin-bottom: 5px;
+      }
+
+      #searchButton {
+        font-size: 1.5em;
+        padding: 10px;
+        width: 50%;
+        margin: 0 auto;
+      }
    }
 }
