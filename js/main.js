@@ -49,6 +49,8 @@ function init (res) {
       break
   }
 
+  searchContainer.style.marginTop = '-150px'
+  weatherContainer.style.padding = '100px'
   cityName.innerText = res.name
   weatherIcon.src = 'http://openweathermap.org/img/w/' + res.weather[0].icon + '.png'
   let resultDescription = res.weather[0].description
@@ -59,10 +61,11 @@ function init (res) {
 }
 
 // selector functions
-
+let searchContainer = document.querySelector('.searchContainer')
 let button = document.getElementById('searchButton')
 let cityName = document.getElementById('cityName')
 let temperature = document.querySelector('.temperature')
+let weatherContainer = document.querySelector('.weatherContainer')
 let weatherDescription = document.querySelector('.weatherDescription')
 let weatherIcon = document.getElementById('weatherIcon')
 let windspeed = document.querySelector('.windspeed')
