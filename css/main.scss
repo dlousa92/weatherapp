@@ -4,6 +4,7 @@
 }
 
 $primary-color: #F7F7FF;
+$accent-color: #007EA7;
 
 
 body {
@@ -19,27 +20,41 @@ body {
 
    .searchContainer {
       @extend %flex-column;
-      transition: .8s;
+      border: none;
+      transition: 1.5s;
+      position: relative;
 
       #searchField {
-        font-size: 1.5em;
-        padding: 10px;
+        font-size: 1.2em;
+        padding: 18px;
+        width: 320px;
         margin-bottom: 5px;
         background-color: $primary-color;
       }
 
+      #searchField:focus {
+        padding: 20px;
+        transition: .2s;
+      }
+
       #searchButton {
-        font-size: 1.5em;
-        padding: 10px;
-        width: 50%;
+        font-size: 1em;
+        padding: 15px;
+        width: 30%;
+        color: $primary-color;
+        background-color: $accent-color;
+        border: $accent-color;
         margin: 0 auto;
-        background-color: $primary-color;
+        position: absolute;
+        left: 260px;
+        top: 12%;
       }
    }
 
    .weatherContainer {
      background-color: $primary-color;
      margin-top: 100px;
+     border-radius: 20px;
 
      .weatherMain {
        @extend %flex-column;
