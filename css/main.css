@@ -11,6 +11,7 @@ body {
   justify-content: center;
   background-image: url("../img/default.jpeg");
   background-size: cover;
+  background-repeat: no-repeat;
   font-family: "Niramit", sans-serif;
 }
 body .searchContainer {
